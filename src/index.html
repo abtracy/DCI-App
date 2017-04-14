@@ -1,0 +1,33 @@
+<md-sidenav>
+    <header>
+        <img style="width:280px" src="../resources/DCI_logo.svg.png"/>
+        <h1>DCI Database</h1>
+    </header>
+    <md-divider></md-divider>
+    <md-list layout-align="center center">
+        <md-list-item ng-repeat="state in root.statesInSidebar">
+            <md-button class="capitalize" ui-sref="{{state.name}}" ui-sref-opts="{reload:true}" ui-sref-active="active" ng-click="root.selection()">{{state.title}}</md-button>
+        </md-list-item>
+    </md-list>
+    <md-divider ng-if="root.signedIn()"></md-divider>
+    <md-list layout-align="center center" ng-if="root.signedIn()">
+        <md-list-item>
+            <md-button class="capitalize" ng-click="root.logout()">
+                Logout
+            </md-button>
+        </md-list-item>
+    </md-list>
+    <md-divider></md-divider>
+    <md-list layout-align="center center" ng-if="!root.signedIn()">
+        <md-list-item>
+            <md-button class="capitalize" ng-click="root.login()">
+                Log In
+            </md-button>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+<div layout="column" flex>
+    <toolbar nav-component-id="navigation"></toolbar>
+    <md-content flex class="content-holder" ui-view="content">
+    </md-content>
+</div>
