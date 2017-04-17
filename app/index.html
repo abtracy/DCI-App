@@ -1,3 +1,4 @@
+<html ng-app="myApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +14,18 @@
 <body>
 <div id="mySidenav" class="sidenav" >
   <img src="http://www.dci.org/pics33/400/LZ/LZMUUJOUOFQQVXG.20150414161815.png"/>
-  <a href="#">Corps</a>
-  <a href="#">Competitions</a>
+  <a href="#!/corps">Corps</a>
+  <a href="#!/view2">Competitions</a>
   <a href="#">Search</a>
 </div>
 
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
-  <ul class="menu" ng-if="myApp.signedIn()">
-    <md-icon href="#" class="material-icons">add</md-icon>
+  <ul class="menu">
+    <md-button ng-if="myApp.signedIn()">
+      <md-icon href="#" class="material-icons">add</md-icon>
+    </md-button>
   </ul>
 
   <!--[if lt IE 7]>
@@ -39,7 +42,7 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
+  <script src="Corps/corps.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
