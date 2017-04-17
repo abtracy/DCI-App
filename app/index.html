@@ -21,8 +21,8 @@
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
-  <ul class="menu" layout="row" layout-align="start end">
-    <md-icon class="material-icons">add</md-icon>
+  <ul class="menu" ng-if="myApp.signedIn()">
+    <md-icon href="#" class="material-icons">add</md-icon>
   </ul>
 
   <!--[if lt IE 7]>
