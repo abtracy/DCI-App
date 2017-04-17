@@ -12,5 +12,14 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 
   $routeProvider.
   otherwise({redirectTo: '/'});
+}]).
+controller("RootCtrl",['$scope',function($scope){
+  $scope.loggedIn = false;
+  $scope.logIn = function(){
+    $scope.loggedIn = true;
+  }
+  $scope.logOut = function(){
+    $scope.loggedIn = false;
+  }
 }]);
 
