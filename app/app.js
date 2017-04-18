@@ -5,13 +5,14 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.corps',
   'myApp.comps',
+  'myApp.home',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
   $routeProvider.
-  otherwise({redirectTo: '/'});
+  otherwise({redirectTo: '/home'});
 }]).
 controller("RootCtrl",['$scope',function($scope){
   $scope.loggedIn = false;
