@@ -15,7 +15,6 @@
     "angular-material-icons": "^0.7.1"
   },
   "resolutions": {
-    "angular": "~1.5.0",
-    "angular-material": "master"
+    "angular": "1.6.4"
   }
 }
