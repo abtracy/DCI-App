@@ -17,17 +17,21 @@ angular.module('myApp', [
   'ngMaterial',
   'ui.router'
 ]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+
+// see http://stackoverflow.com/questions/23931040/how-inject-stateprovider-in-angular-application
+// and http://stackoverflow.com/questions/31119896/unknown-provider-stateproviderprovider-stateprovider
+// for troubleshooting $stateProvider
+config(['$locationProvider', '$routeProvider', '$stateProvider', function($locationProvider, $routeProvider, $stateProvider) {
   $locationProvider.hashPrefix('!');
 
   $routeProvider.
   otherwise({redirectTo: '/home'});
 }]).
-controller("RootCtrl",['$scope', '$stateProvider', function($scope, $stateProvider){
+controller("RootCtrl",['$scope', '$state', function($scope, $state){
   $scope.loggedIn = false;
   $scope.logIn = function(){
     $scope.loggedIn = true;
-    $stateProvider.state();
+    // $stateProvider.state();
     };
   $scope.logOut = function(){
     $scope.loggedIn = false;
