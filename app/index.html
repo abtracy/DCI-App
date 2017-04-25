@@ -23,14 +23,14 @@
 
 <body>
 <md-sidenav id="mySidenav" class="md-sidenav-left" ng-cloak>
-  <section href="#!/home">
-    <img src="http://www.dci.org/pics33/400/LZ/LZMUUJOUOFQQVXG.20150414161815.png"/>
-  </section>
-  <a href="#!/corps">Corps</a>
-  <a href="#!/comps">Competitions</a>
-  <a href="#">Search</a>
-  <a href="#!/login" ng-if="!loggedIn">Log In
-  <button ng-if="loggedIn" ng-click="logOut()">Log Out</button></a>
+  <a href="#!/home">
+    <img src="http://www.dci.org/pics33/400/LZ/LZMUUJOUOFQQVXG.20150414161815.png">
+  </a>
+  <a href="#!/corps"><li>Corps</li></a>
+  <a href="#!/comps"><li>Competitions</li></a>
+  <a href="#"><li>Search</li></a>
+  <a href="#!/login" ng-if="!loggedIn"><li>Log In
+  <button ng-if="loggedIn" ng-click="logOut()">Log Out</button></li></a>
 </md-sidenav>
 
 
