@@ -2,8 +2,8 @@
 
 // a helper function to avoid typing the full API address constantly
 var projectApi = function(path) {
-  return 'http://plato.cs.virginia.edu/~hab9sr/dci-backend/' + path;
-  // return 'http://localhost:80/dci-backend/' + path;
+  // return 'http://plato.cs.virginia.edu/~hab9sr/dci-backend/' + path;
+  return 'http://localhost:80/dci-backend/' + path;
 }
 
 // Declare app level module which depends on views, and components
@@ -11,6 +11,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.corps',
   'myApp.comps',
+  'myApp.people',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
