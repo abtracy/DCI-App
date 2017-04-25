@@ -1,5 +1,5 @@
 <header>Welcome to the DCI Database!</header>
 <p>To add or edit entries, please log in.</p>
 
-<a href="#!/login"><button>Log In</button>
+<a href="#!/login"><button ng-if="!loggedIn">Log In</button>
     <button ng-if="loggedIn" ng-click="logOut()">Log Out</button></a>

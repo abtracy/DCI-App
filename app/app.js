@@ -14,7 +14,8 @@ angular.module('myApp', [
   'myApp.home',
   'myApp.login',
   'myApp.version',
-  'ngMaterial'
+  'ngMaterial',
+  'ui.router'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
@@ -22,13 +23,11 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $routeProvider.
   otherwise({redirectTo: '/home'});
 }]).
-controller("RootCtrl",['$scope', '$mdDialog', function($scope){
-  $scope.status = '  ';
-  $scope.customFullscreen = false;
+controller("RootCtrl",['$scope', '$stateProvider', function($scope, $stateProvider){
   $scope.loggedIn = false;
-  $scope.loggingIn = false;
   $scope.logIn = function(){
     $scope.loggedIn = true;
+    $stateProvider.state();
     };
   $scope.logOut = function(){
     $scope.loggedIn = false;

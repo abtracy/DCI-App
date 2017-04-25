@@ -29,17 +29,17 @@
   <a href="#!/corps"><li>Corps</li></a>
   <a href="#!/comps"><li>Competitions</li></a>
   <a href="#"><li>Search</li></a>
-  <a href="#!/login" ng-if="!loggedIn"><li>Log In
-  <button ng-if="loggedIn" ng-click="logOut()">Log Out</button></li></a>
+  <a href="#!/login"><li ng-if="!loggedIn">Log In</li>
+  <li ng-if="loggedIn" ng-click="logOut()">Log Out</li></a>
 </md-sidenav>
 
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
   <ul class="menu">
-    <md-button ng-if="loggedIn">
-      <md-icon href="#" class="material-icons">add</md-icon>
-    </md-button>
+    <a ng-if="loggedIn" href="#">
+      <md-icon class="material-icons">add</md-icon>
+    </a>
   </ul>
 
   <!--[if lt IE 7]>
