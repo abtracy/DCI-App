@@ -1,10 +1,10 @@
-angular.module('myApp.loginModal',['ngRoute'])
+angular.module('myApp.login',['ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/login', {
-            templateUrl: 'Login/loginModal.html',
-            controller: 'LoginModalCtrl'
+            templateUrl: 'Login/login.html',
+            controller: 'LoginCtrl'
         });
     }]).
-controller('LoginModalCtrl', function ($scope) {
+controller('LoginCtrl', function ($scope) {
 
 });
