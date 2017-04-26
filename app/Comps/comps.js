@@ -35,7 +35,7 @@ angular.module('myApp.comps', ['ngRoute'])
 
   // get scores for this competition
   $scope.scores = [];
-  var scoresApi = $resource(projectApi("scores/show.php"), { id: $routeParams.id });
+  var scoresApi = $resource(projectApi("scores/comp.php"), { id: $routeParams.id });
   $scope.scores = scoresApi.query();
 
 }]);

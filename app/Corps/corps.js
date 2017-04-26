@@ -54,4 +54,10 @@ angular.module('myApp.corps', ['ngRoute', 'ngResource'])
   // so now we'll use corpsApi.get()
   $scope.corps = corpsApi.get();
 
+  var showsApi = $resource(projectApi('shows/corps.php'), { corpsName: $routeParams.corpsName });
+  $scope.shows = showsApi.query();
+
+  var compsApi = $resource(projectApi('comps/corps.php'), { corpsName: $routeParams.corpsName });
+  $scope.comps = compsApi.query();
+
 }]);
