@@ -5,10 +5,20 @@
 
 <section id="info">
   <h3>Corps Info</h3>
-  <p>
-    <b>Hometown: </b>{{ corps.city + ', ' + corps.state }}<br>
-    <b>Class: </b>{{ corps.class }}
-  </p>
+  <table style="width:100%">
+    <tr>
+      <td>
+        <p>
+          <b>Hometown: </b>{{ corps.city + ', ' + corps.state }}<br>
+          <b>Class: </b>{{ corps.class }}
+        </p>
+      </td>
+      <td style="text-align:right">
+        <img src="{{ getLogoPath(corps.name) }}" alt="corps logo">
+      </td>
+    </tr>
+  </table>
+
 </section>
 
 <section id="shows">

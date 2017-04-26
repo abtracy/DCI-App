@@ -60,4 +60,13 @@ angular.module('myApp.corps', ['ngRoute', 'ngResource'])
   var compsApi = $resource(projectApi('comps/corps.php'), { corpsName: $routeParams.corpsName });
   $scope.comps = compsApi.query();
 
+  $scope.getLogoPath = function(corpsName) {
+    var formattedCorpsName = corpsName
+      .split(' ').join('-') // replace spaces with hyphens
+      .split('!').join('') // remove exclamation points
+      .toLowerCase();
+    console.log(formattedCorpsName);
+    return projectApi('logos/' + formattedCorpsName + '.jpg');
+  }
+
 }]);
