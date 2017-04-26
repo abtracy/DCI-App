@@ -23,7 +23,11 @@ angular.module('myApp', [
 // for troubleshooting $stateProvider
 config(['$locationProvider', '$routeProvider', '$stateProvider', function($locationProvider, $routeProvider, $stateProvider) {
   $locationProvider.hashPrefix('!');
-
+  $stateProvider.state('home',{
+    url:'/home',
+    templateUrl: '/Home/home',
+    controller: 'HomeCtrl'
+  });
   $routeProvider.
   otherwise({redirectTo: '/home'});
 }]).
@@ -31,7 +35,7 @@ controller("RootCtrl",['$scope', '$state', function($scope, $state){
   $scope.loggedIn = false;
   $scope.logIn = function(){
     $scope.loggedIn = true;
-    // $stateProvider.state();
+    $state.go('home');
     };
   $scope.logOut = function(){
     $scope.loggedIn = false;
