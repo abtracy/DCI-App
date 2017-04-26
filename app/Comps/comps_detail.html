@@ -1,0 +1,34 @@
+<h1>{{ comp.name }}</h1>
+
+<a href="#!/comps">Back</a>
+
+<section id="info">
+  <h3>Competition Info</h3>
+  <p><b>Date: </b>{{ comp.comp_date }}</p>
+  <p><b>Venue: </b>{{ venue }}</p>
+</section>
+
+<section id="scores">
+  <h3>Scores</h3>
+  <table class="table table-bordered table-striped" ng-show="scores.length > 0">
+    <thead>
+      <th>Corps</th>
+      <th>General Effect</th>
+      <th>Visual</th>
+      <th>Music</th>
+      <th>Penalty</th>
+      <th>Overall</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="s in scores">
+        <td>{{ s.corps }}</td>
+        <td>{{ s.general_effect }}</td>
+        <td>{{ s.visual }}</td>
+        <td>{{ s.music }}</td>
+        <td>{{ s.penalty }}</td>
+        <td>{{ s.overall }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p ng-show="scores.length == 0">No scores available</p>
+</section>

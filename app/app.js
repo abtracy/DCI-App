@@ -13,9 +13,10 @@ angular.module('myApp', [
   'myApp.comps',
   'myApp.home',
   'myApp.login',
-  'myApp.version',
   'ngMaterial',
-  'ui.router'
+  'ui.router',
+  'myApp.people',
+  'myApp.version'
 ]).
 
 // see http://stackoverflow.com/questions/23931040/how-inject-stateprovider-in-angular-application
