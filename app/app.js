@@ -12,6 +12,7 @@ angular.module('myApp', [
   'myApp.corps',
   'myApp.comps',
   'myApp.home',
+  'myApp.people',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
