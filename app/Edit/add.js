@@ -7,11 +7,18 @@ angular.module('myApp.add',['ngRoute'])
             .when('/addMember',{
                 templateUrl:'Edit/addMember.html',
                 controller:'AddMemberCtrl'
-        });
+        })
+            .when('/addStaff',{
+                templateUrl:'Edit/addStaff.html',
+                controller:'AddStaffCtrl'
+            });
     }]).
 controller('AddCtrl', function ($scope) {
 
 })
     .controller('AddMemberCtrl',function($scope){
-        
+
+    })
+    .controller('AddStaffCtrl',function($scope){
+
     });
