@@ -33,9 +33,22 @@ config(['$locationProvider', '$routeProvider', '$stateProvider', function($locat
 }]).
 controller("RootCtrl",['$scope', '$state', function($scope, $state){
   $scope.loggedIn = false;
+  $scope.failedLogin = false;
+  this.username = '';
+  this.password = '';
   $scope.logIn = function(){
-    $scope.loggedIn = true;
-    $state.go('home');
+    if(this.username === "admin"){
+      if(this.password === "DCIRox"){
+        $scope.loggedIn = true;
+        $scope.failedLogin = false;
+        $state.go('home');
+      } else {
+        $scope.failedLogin = true;
+      }
+    } else {
+      $scope.failedLogin = true;
+    }
+
     };
   $scope.logOut = function(){
     $scope.loggedIn = false;

@@ -66,3 +66,7 @@ header {
 md-dialog{
   z-index: 1;
 }
+
+md-dialog error{
+  color: #ff0000;
+}
