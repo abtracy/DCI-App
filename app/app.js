@@ -4,7 +4,7 @@
 var projectApi = function(path) {
   return 'http://plato.cs.virginia.edu/~hab9sr/dci-backend/' + path;
   // return 'http://localhost:80/dci-backend/' + path;
-}
+};
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
@@ -13,6 +13,7 @@ angular.module('myApp', [
   'myApp.comps',
   'myApp.home',
   'myApp.login',
+  'myApp.add',
   'ngMaterial',
   'ui.router',
   'myApp.people',
