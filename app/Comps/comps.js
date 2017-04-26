@@ -19,6 +19,8 @@ angular.module('myApp.comps', ['ngRoute'])
   var compsApi = $resource(projectApi("/comps/all.php"));
   $scope.comps = compsApi.query();
 
+  $scope.scoresDownloadLink = projectApi("scores/export.php");
+
 }])
 
 .controller('CompsDetailController', ['$scope', '$resource', '$routeParams', function($scope, $resource, $routeParams) {
